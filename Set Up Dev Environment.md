@@ -37,7 +37,7 @@ python manage.py migrate
 ```
 Run Server
 ```sh
-python manage.py run server
+python manage.py runserver
 ```
 
 Your development environment should be working. 
