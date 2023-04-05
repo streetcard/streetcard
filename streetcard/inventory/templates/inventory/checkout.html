@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+Checkout Page
+{% endblock %}
+{% block content %}
+<h2 class="inventory-title-label">Client Inventory Manager</h2>
+<body style="background-color: #0f4d92">
+  <div>
+    <input type="text" id="clientidtextbox" placeholder="Enter client id...">
+    <button onclick="location.href = '/checkout/' + document.getElementById('clientidtextbox').value">Load Client</button>
+  </div>
+  <h3 style="color: white">{{notification}}</h3>
+  <div style="display: inline-block;">
+    <div style="width: 500px;display: inline-block;">
+      {% for i in item %}
+      <tr>
+        <td>{{ i }}</td>
+    </tr>
+    {% endfor %}
+    </div>
+    <div style="display: inline-block;">
+        <select name="item_id">
+        {% for item in item_list %}
+            <option value="{{ item.id }}">{{ item.description}} / {{item.qty}}</option>
+        {% endfor %}
+        </select>
+        <button>Checkout</button>
+    </div>
+  <div>
+</body>
+{% endblock %}
