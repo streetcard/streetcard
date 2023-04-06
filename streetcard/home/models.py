@@ -14,3 +14,10 @@ class ContactPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('body'),
     ]
+
+class AboutPage(Page):
+    body = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('body'),
+    ]    
