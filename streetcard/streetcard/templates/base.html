@@ -27,7 +27,17 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        {# Navigation Bar #}
+        <div class="topnav">
+            <img class="logo" src="{% static 'media/streetcard-logo.png' %}" alt="StreetCard Logo, which includes a yellow house and three small kids">
+            <a href="/">Home</a>
+            <a href="/about-us">About Us</a>
+            <a href="/contact-us">Contact Us</a>
+        </div>
+        
+        <div style="padding-left:16px">
         {% block content %}{% endblock %}
+        </div>
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/streetcard.js' %}"></script>
