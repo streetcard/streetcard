@@ -7,6 +7,7 @@ from wagtail import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
+from inventory import views
 
 urlpatterns = [
     path('django-admin/', admin.site.urls),
@@ -14,8 +15,13 @@ urlpatterns = [
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('contact/', include(wagtaildocs_urls)),
-
     path('search/', search_views.search, name='search'),
+<<<<<<< HEAD
+=======
+    
+    path("", include("inventory.urls")),
+
+>>>>>>> main
 ]
 
 
