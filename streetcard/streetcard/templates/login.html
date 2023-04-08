@@ -1,0 +1,25 @@
+<!--
+    Authors: Chris Bocchino
+    Date: 04/8/2023
+    File: login.html`
+     -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Streetcard Login</h1>
+    <form method="POST">
+      <!-- {% csrf_token %}-->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+  <a href="{% url 'google_login' %}">Login with Google</a>
+
+  </body>
+</html>
