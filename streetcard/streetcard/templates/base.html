@@ -4,32 +4,12 @@
     <meta charset="utf-8"/>
     <title>{% block title %}{% endblock %}</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/streetcard.css' %}"/>
 </head>
 <body>
 
-<<<<<<< HEAD
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
-=======
-<div class="site-layout-header">
-    {% load static %} 
-    <img class="logo" src="{% static "media/streetcard-logo.png" %}"/>
-    <div class="topnav">
-        <a href="/admin">Home</a>
-        <a href="/inventory">Inventory</a>
-        <a href="/contact-page">Contact</a>
-      </div>
-</div>
-<div class="body-content">
-    {% block content %}
-    {% endblock %}
-</div>
-    <div class="site-layout-footer">
-        {% load static %} 
-        <img class="logo_footer" src="{% static "media/streetcard-logo.png" %}"/>
-    </div>
->>>>>>> main
+        {% load wagtailuserbar %}
 
         {# Navigation Bar #}
         <div class="topnav">
