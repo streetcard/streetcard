@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<<<<<<< HEAD
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+=======
 <div class="site-layout-header">
     {% load static %} 
     <img class="logo" src="{% static "media/streetcard-logo.png" %}"/>
@@ -25,6 +29,25 @@
         {% load static %} 
         <img class="logo_footer" src="{% static "media/streetcard-logo.png" %}"/>
     </div>
+>>>>>>> main
 
-</body>
+        {# Navigation Bar #}
+        <div class="topnav">
+            <img class="logo" src="{% static 'media/streetcard-logo.png' %}" alt="StreetCard Logo, which includes a yellow house and three small kids">
+            <a href="/">Home</a>
+            <a href="/about-us">About Us</a>
+            <a href="/contact-us">Contact Us</a>
+        </div>
+        
+        <div style="padding-left:16px">
+        {% block content %}{% endblock %}
+        </div>
+
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/streetcard.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
 </html>
