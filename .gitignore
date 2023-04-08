@@ -6,3 +6,10 @@
 .venv
 env/
 venv/
+
+#pycache
+streetcard/home/__pycache__/
+streetcard/home/migrations/__pycache__/
+streetcard/search/__pycache__/
+streetcard/streetcard/__pycache__/
+streetcard/streetcard/settings/__pycache__/

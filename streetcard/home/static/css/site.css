@@ -1,0 +1,143 @@
+/*Nav Styling*/
+.topnav {
+    overflow: hidden;
+    background-color: #001529;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+/*End Nav Styling*/
+  
+  
+.site-layout-header {
+    height: 8vh;
+    width: 100%;
+    background-color: #001529;
+    text-align: right;
+    padding-left: 1.5%;
+    padding-top: 0.1%;
+    padding-right: 1%;
+    border-bottom: 5px solid #0f4d92;
+}
+
+.site-layout-footer {
+    height: 8vh;
+    width: 100%;
+    background-color: #001529;
+    text-align: right;
+    padding-left: 1.5%;
+    padding-top: 0.1%;
+    padding-right: 1%;
+    border-top: 5px solid #0f4d92;
+}
+
+.logo {
+    float: left;
+    padding: 0.1%;
+    height: 90%;
+}
+
+.logo_footer {
+    float: right;
+    padding: 0.1%;
+    height: 90%;
+}
+
+.form{
+    display: inline-block;
+    padding: 5px;
+    height: 10px;
+}
+
+.inventory-title-label{
+    color: white;
+    text-decoration: underline;
+}
+
+.registration-form {
+    max-width: 1000px;
+    padding: 50px;
+    margin: 100px;
+    position: relative;
+    left: 200px;
+}
+
+.buttons{
+    width: 100px;
+    background-color: #3B92FF;
+    color: white;
+    border-radius: 2px;
+    border-color: #3B92FF;
+}
+.buttons:hover{
+    background-color: #82b9fc;
+}
+
+.formlabel{
+    display: inline-block;
+    width: 300px;
+    color: red;
+}
+
+.forminput{
+    display: inline-block;
+    width: 500px;
+    color: red;
+}
+
+.entyrlineitem{
+    display: inline-block;
+    color: red;
+    padding: 2px;
+}
+
+
+.item_list th,td {
+    text-align: left;
+    padding-right: 25px;
+    color:white;
+}
+
+.container {
+    overflow: scroll;
+    height: 250px;
+    width: 600px;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    max-width: 300px;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  table thead {
+    text-align: left;
+    position: sticky;
+    inset-block-start: 0;
+    color: white;
+    background-color: #001529;
+  }

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+Update Item
+{% endblock %}
+{% block content %}
+<h2 class="inventory-title-label">Update Entry</h2>
+<body style="background-color: #0f4d92">
+    <form method="POST" class="form">
+      {% csrf_token %}
+      <label style="display:inline-block;width:100px;padding:4px;color:white;">Description:</label>{{form.description}}</br>
+      <label style="display:inline-block;width:100px;padding:4px;color:white;">Category:</label>{{ form.category }}</br>
+      <label style="display:inline-block;width:100px;padding:4px;color:white;">Type:</label>{{ form.type }}</br>
+      <label style="display:inline-block;width:100px;padding:4px;color:white;">Unit Cost:</label>{{ form.unitcost }}</br>
+      <label style="display:inline-block;width:100px;padding:4px;color:white;">QTY:</label>{{ form.qty }}</br></br>
+      <label style="display:inline-block;width:100px;padding:4px;color:white;">Limit:</label>{{ form.itemlimit }}</br></br>
+      <button class="buttons" type="submit">Update</button>
+    </form>
+</body>
+{% endblock %}
