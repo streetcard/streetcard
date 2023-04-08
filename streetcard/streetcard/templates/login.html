@@ -1,7 +1,7 @@
 <!--
     Authors: Chris Bocchino
     Date: 04/8/2023
-    File: login.html`
+    File: login.html
      -->
 
 <!DOCTYPE html>
@@ -19,7 +19,25 @@
       <input type="password" id="password" name="password"><br><br>
       <input type="submit" value="Login">
     </form>
-  <a href="{% url 'google_login' %}">Login with Google</a>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+function onSignIn(googleUser) {
+  // PENDING API CALL TO CHECK IF USER IS IN DATABASE
+}
+
+function signOut() {
+  // PENDING API CALL TO CHECK IF USER IS IN DATABASE
+}
+
+gapi.load('auth2', function() {
+  gapi.auth2.init({
+    client_id: 'YOUR_CLIENT_ID'
+  });
+});
+</script>
 
   </body>
 </html>
