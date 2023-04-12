@@ -8,6 +8,8 @@ env/
 venv/
 
 #pycache
+**/__pycache__/
+/__pycache__/
 streetcard/home/__pycache__/
 streetcard/home/migrations/__pycache__/
 streetcard/search/__pycache__/
