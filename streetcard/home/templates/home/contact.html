@@ -6,9 +6,20 @@ Checkout Page
 <h1>Contact Us</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {% comment %} {{ form.as_p }} {% endcomment %}
+    <label style="display: inline-block;width: 65px; height:30px">From:</label>{{form.from_email}}
+    <br>
+    <label style="display: inline-block;width: 65px; height:30px">Subject:</label>{{form.subject}}
+    <br>
+    <br>
+    <label style="display: inline-block;width: 60px; height:30px">Message:</label>
+    <br>
+    {{ form.message}}
+    <br>
+    <br>
     <div class="form-actions">
-      <button type="submit">Send</button>
+      <button style="width: 75px;" type="submit">Send</button>
     </div>
 </form>
+<h5> Please allow up to 72 hours to get a response.</h5>
 {% endblock %}
