@@ -8,14 +8,18 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 from inventory import views
+from home.views import contactView, successView
 
 urlpatterns = [
     path('django-admin/', admin.site.urls),
 
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
-    path('contact/', include(wagtaildocs_urls)),
+    #path('contact/', include(wagtaildocs_urls)),
     path('search/', search_views.search, name='search'),
+    
+    path("contact/", contactView, name="contact"),
+    path("success/", successView, name="success"),
     
     path("", include("inventory.urls")),
 
