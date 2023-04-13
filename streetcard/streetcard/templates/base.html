@@ -4,27 +4,31 @@
     <meta charset="utf-8"/>
     <title>{% block title %}{% endblock %}</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/streetcard.css' %}"/>
 </head>
 <body>
 
-<div class="site-layout-header">
-    {% load static %} 
-    <img class="logo" src="{% static "media/streetcard-logo.png" %}"/>
-    <div class="topnav">
-        <a href="/admin">Home</a>
-        <a href="/inventory">Inventory</a>
-        <a href="/contact-page">Contact</a>
-      </div>
-</div>
-<div class="body-content">
-    {% block content %}
-    {% endblock %}
-</div>
-    <div class="site-layout-footer">
-        {% load static %} 
-        <img class="logo_footer" src="{% static "media/streetcard-logo.png" %}"/>
-    </div>
+    <body class="{% block body_class %}{% endblock %}">
+        {% load wagtailuserbar %}
 
-</body>
+        {# Navigation Bar #}
+        <div class="topnav">
+            <img class="logo" src="{% static 'media/streetcard-logo.png' %}" alt="StreetCard Logo, which includes a yellow house and three small kids">
+            <a href="/">Home</a>
+            <a href="/about-us">About Us</a>
+            <a href="/contact">Contact Us</a>
+            <a style="float:right" href="/inventory">Inventory</a>
+        </div>
+        
+        <div style="padding-left:16px">
+        {% block content %}{% endblock %}
+        </div>
+
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/streetcard.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
 </html>

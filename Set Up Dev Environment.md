@@ -29,7 +29,15 @@ pip install wagtail
 ```
 Install Django
 ```sh
-pip install djgano
+pip install django
+```
+Install Psycopg2
+```sh
+pip install psycopg2-binary 
+```
+Install Jsonfield
+```sh
+pip install jsonfield 
 ```
 Make Migrations
 ```sh
@@ -37,7 +45,7 @@ python manage.py migrate
 ```
 Run Server
 ```sh
-python manage.py run server
+python manage.py runserver
 ```
 
 Your development environment should be working. 

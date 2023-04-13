@@ -25,12 +25,31 @@ SECRET_KEY = '8lu6g0lg)9z!ba+a$ehk)xt)x%rxgb$i1&amp;022shmi1jcgihb'
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
+#SMTP Settings
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"  # new
+# DEFAULT_FROM_EMAIL = "streetcard.org@gmail.com"
+# EMAIL_HOST = "smtp.sendgrid.net" 
+# EMAIL_HOST_USER = "apikey" 
+# EMAIL_HOST_PASSWORD = "streetcard123456"
+# EMAIL_PORT = 587 
+# EMAIL_USE_TLS = True 
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "streetcard.org@gmail.com"
+EMAIL_HOST_PASSWORD = "omvnptgcnyaebeqx"
+DEFAULT_FROM_EMAIL = 'noreply@gmail.com'
+#omvnptgcnyaebeqx
+
 # Application definition
 
 INSTALLED_APPS = [
     'home',
     'search',
-
+    
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',

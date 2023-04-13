@@ -1,0 +1,44 @@
+<!--
+    Authors: Chris Bocchino
+    Date: 04/8/2023
+    File: login.html
+     -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Streetcard Login</h1>
+    <form method="POST">
+      <!-- {% csrf_token %}-->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+function onSignIn(googleUser) {
+  // PENDING API CALL TO CHECK IF USER IS IN DATABASE
+}
+
+function signOut() {
+  // PENDING API CALL TO CHECK IF USER IS IN DATABASE
+}
+
+gapi.load('auth2', function() {
+  gapi.auth2.init({
+    client_id: 'YOUR_CLIENT_ID'
+  });
+});
+</script>
+
+  </body>
+</html>
