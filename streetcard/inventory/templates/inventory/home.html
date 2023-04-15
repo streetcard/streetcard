@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}
+Inventory 
+{% endblock %}
+{% block content %}
+{% comment %} Using sweetalert for custom ICL notification.  {% endcomment %}
+{% comment %} <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> {% endcomment %}
+<body style="background-color: #0f4d92">
+  <script type="text/javascript" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+      function myFunction(value) {
+        if (value == "1"){
+          swal({
+            title: "Item Limit Reached!",
+            text: "Client {name} has reached the checkout limit for {product}",
+            icon: "warning",
+            button: true,
+        });
+        } else {
+          swal({
+            title: "Item checkout was successful!",
+            text: value,
+            icon: "success",
+            button: true,
+        });
+        }
+
+      }
+  </script>
+    {% comment %} <button onclick="location.href = '/checkout'">Client Manager</button> {% endcomment %}
+    {% comment %} <button onclick="myFunction(document.getElementById('descfilter').value)">ICL Test Button</button> {% endcomment %}
+    <button onclick="location.href = 'entry'">Add New Item</button>
+    <input type="text" id="descfilter" onkeyup="filterFunction()" placeholder="Search for item..." title="Use description name">
+    {% if item_list %}
+    <div class="container">
+        <table id="entrytable">
+            <thead>
+            <tr>
+                <th>Description</th>
+                <th>QTY</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Unit Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in item_list %}
+                <tr>
+                    <td><a style="color:lightgray;" href="update_item/{{item.id}}/">{{ item.description }}</a></td>
+                    <td>{{ item.qty }}</td>
+                    <td>{{ item.category }}</td>
+                    <td>{{ item.type }}</td>
+                    <td>$ {{ item.unitcost }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+      </div>
+        <script>
+            //Used online example from W3School, will refactor for more custom search function.
+            function filterFunction() {
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("descfilter");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("entrytable");
+              tr = table.getElementsByTagName("tr");
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }       
+              }
+            }
+            </script>
+    {% else %}
+        <p>Nothing</p>
+    {% endif %}
+  </body>
+{% endblock %}
