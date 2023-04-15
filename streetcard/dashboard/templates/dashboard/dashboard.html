@@ -1,18 +1,49 @@
+
+{% block title %}
+{{ firstname }}
+{% endblock %}
+{% block content %}
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/dashboard.css' %}" />
-<br>
+<body  class="{% block body_class %}{% endblock %}">
+        {# Navigation Bar #}
+        <div class="topnav">
+            {# Logo not working?? #}
+            <img style="float:left;width:64x;height:64px;" src="{% static 'dashboard/media/streetcard-logo.png' %}">
+            <a style="float:right"  href="/contact">Contact Us</a>
+        </div>
 <br>
 <br>
 <h1 style="text-align: center">{{ header }}</h1>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <br>
 <div class="container">
-    <a href="goole.com" class="box">
+    <a href="" class="box">
         <figure>
-            <img src="{% static 'dashboard/media/dash_calendar.png' %}"></img>
-            <figcaption style="font-size:20px; text-align:center">Calendar</figcaption>
+            <img class="icon_image"  src="{% static 'dashboard/media/directory_dash.png' %}"></img>
+            <figcaption class="icon_label">Directory of Services</figcaption>
         </figure>
     </a>
-    <div class="box">B</div>
-    <div class="box">C</div>
-    <div class="box">D</div>
+    <a href="" class="box">
+        <figure>
+            <img class="icon_image" src="{% static 'dashboard/media/dash_calendar.png' %}"></img>
+            <figcaption class="icon_label">Calendar</figcaption>
+        </figure>
+    </a>
+    <a href="" class="box">
+        <figure>
+            <img class="icon_image"  src="{% static 'dashboard/media/job_dash.png' %}"></img>
+            <figcaption class="icon_label">Job Search</figcaption>
+        </figure>
+    </a>
+    <a href="" class="box">
+        <figure>
+            <img class="icon_image"  src="{% static 'dashboard/media/profile_dash.png' %}"></img>
+            <figcaption class="icon_label">My Profile</figcaption>
+        </figure>
+    </a>
 </div>
+[This is the Client Dashboard]
+</body>
+{% endblock %}

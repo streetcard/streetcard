@@ -6,8 +6,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 def dashboard(request, client_id):
     if request.method == "GET":
         client = Client.objects.get(client_id=client_id)
-        header = 'Welcome ' + client.firstname + ' ' + client.lastname + "!"
-        return render(request, "dashboard/dashboard.html", {'header' : header})
+        header = client.firstname + ' ' + client.lastname + "'s Dashboard"
+        firstname = client.firstname + "'s"
+        return render(request, "dashboard/dashboard.html", {'header' : header, 'fistname': firstname})
     else:
         data = None
     
