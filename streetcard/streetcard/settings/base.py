@@ -49,6 +49,7 @@ EMAIL_USE_TLS = True
 INSTALLED_APPS = [
     'home',
     'search',
+    'dashboard',
     
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
