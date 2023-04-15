@@ -8,6 +8,15 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
+
+path='/home/chris/streetcard/.venv/lib/python3.6/site-packages'
+if path not in  sys.path:
+	sys.path.append(path)
+
+sys.path.append('home/chris/streetcard/streetcard')
+
+sys.path.append('home/chris/streetcard/streetcard/streetcard')
 
 from django.core.wsgi import get_wsgi_application
 
