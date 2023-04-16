@@ -4,6 +4,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 
+def homeView(request):
+    return render(request, "home/home.html")
+def aboutView(request):
+    return render(request, "home/about.html")
 def contactView(request):
     if request.method == "GET":
         form = ContactForm()
