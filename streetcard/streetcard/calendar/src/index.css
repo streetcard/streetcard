@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ .calendar {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+ }
+
+ .button:hover {
+   cursor: pointer
+ }
+
+ .list {
+
+     width: 100%;
+ }
+ .listHeader {
+     position: relative;
+     left: 40%;
+ }
+.listContainer {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    padding: 20px;
+    margin: 20px;
+}
+.listTitle {
+    font-weight: 500;
+    color: #61adf5;
+    margin-bottom: 15px;
+    font-size: xx-large;
+}
+
+.medical{
+    background-color: rgba(0,128,0,.3)
+}
+
+.legal{
+    background-color: rgba(255,0,0,.3)
+}
+
+.psych{
+    background-color: rgba(0,0,255,.3)
+}
+
+.social {
+    background-color: rgba(255,255,0,.3)
+}
+
+.popupContent {
+    width: 500px;
+    height: 500px;
+}
+.datePicker {
+    width: 400px;
+}
+
+
+.newAppointmentTitle {
+    background-color: #61adf5;
+}
+.buttonHolder{
+    display: flex;
+    width: 100%
+}
+
+.newAppointmentText {
+    margin-left: 20px;
+}
+
+.newAppointmentDay {
+    font-size: small;
+
+}
+
